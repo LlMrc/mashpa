@@ -5,6 +5,7 @@ import { Box, Divider, Typography } from "@mui/material";
 
 import SideMenu from "./commun/SideMenu";
 import Link from "next/link";
+import { Vrpano, Euro, TravelExplore, Movie, DownhillSkiing, Diversity1, DriveEta } from "@mui/icons-material";
 
 export default function GroupMenu() {
   return (

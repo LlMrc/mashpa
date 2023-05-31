@@ -1,12 +1,23 @@
-'use client'
-
+"use client";
 
 import React from "react";
-import { Box, CardMedia, styled } from "@mui/material";
+import {
+  Box,
+  Card,
+  CardActions,
+  CardContent,
+  Checkbox,
+  Container,
+  IconButton,
+  Typography,
+  styled,
+} from "@mui/material";
 import Post from "./Post";
 
 import AddPost from "./AddPost";
-
+import { FavoriteBorder, Favorite, Share } from "@mui/icons-material";
+import MeloImage from "/public/melo.png";
+import Image from "next/image";
 
 const StyleMargin = styled("div")(({ theme }) => ({
   root: {
@@ -19,25 +30,18 @@ const StyleMargin = styled("div")(({ theme }) => ({
 const HomePage = () => {
   return (
     <>
-    <StyleMargin>
-      <Box flex={1} p={2}>
-        <Post img="https://images.pexels.com/photos/2674052/pexels-photo-2674052.jpeg?auto=compress&cs=tinysrgb&w=400" />
-        <Post img="https://images.pexels.com/photos/164287/pexels-photo-164287.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-        <Post img="https://images.pexels.com/photos/5036698/pexels-photo-5036698.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-        <Post img="https://images.pexels.com/photos/5254651/pexels-photo-5254651.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-        <Post img="https://images.pexels.com/photos/8101834/pexels-photo-8101834.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-   
-        <CardMedia
-  component="video"
-  src="https://www.pexels.com/video/red-leaves-in-autumn-1777892/"
-  autoPlay
-  muted
-  controls
-/>
-      </Box>
-    
-      <AddPost />
-      
+     
+      <StyleMargin>
+        <Box flex={1} sx={{ padding: { xs: 0, sm: 0, md: 2 } }}>
+          <Post img="https://images.pexels.com/photos/2674052/pexels-photo-2674052.jpeg?auto=compress&cs=tinysrgb&w=400" />
+          <Post img="https://images.pexels.com/photos/164287/pexels-photo-164287.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+          <Post img="https://images.pexels.com/photos/5036698/pexels-photo-5036698.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+          <Post img="https://images.pexels.com/photos/5254651/pexels-photo-5254651.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+          <Post img="https://images.pexels.com/photos/8101834/pexels-photo-8101834.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+         
+        </Box>
+
+        <AddPost />
       </StyleMargin>
     </>
   );
