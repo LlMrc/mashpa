@@ -1,8 +1,7 @@
 "use client";
 
 import React from "react";
-import type { Metadata } from "next";
-import getAllUsers from "@/lib/getAllUsers";
+
 import Link from "next/link";
 import {
   Grid,
@@ -18,6 +17,7 @@ import {
 } from "@mui/material";
 import NavBar from "../components/NavBar";
 import FrienSuggetion from "../components/FrienSuggetion";
+import getAllUsers from "../../../lib/getAllUsers";
 
 
 

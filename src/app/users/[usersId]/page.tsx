@@ -3,10 +3,11 @@ import React, { FC, Suspense } from 'react'
 
 
 import { Typography } from '@mui/material'
-import fetchPost from '@/lib/getUser'
-import getUser from '@/lib/getUser'
+
 import PostModal from '@/app/components/PostModal'
-import getPost from '@/lib/getUserPost'
+import getUser from '../../../../lib/getUser'
+import getPost from '../../../../lib/getUserPost'
+
 
 
 
