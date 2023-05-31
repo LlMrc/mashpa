@@ -5,7 +5,7 @@ import { Box, Divider, Typography } from "@mui/material";
 
 import SideMenu from "./commun/SideMenu";
 import Link from "next/link";
-import { Vrpano, Euro, TravelExplore, Movie, DownhillSkiing, Diversity1, DriveEta } from "@mui/icons-material";
+
 
 export default function GroupMenu() {
   return (
@@ -31,31 +31,31 @@ export default function GroupMenu() {
           href="/group/pages/photography"
           style={{ textDecoration: "none" }}
         >
-          <SideMenu icon={<Vrpano />} title="Photography" />
+          <SideMenu title="Photography" />
         </Link>
 
         <Link href="/group/pages/finance" style={{ textDecoration: "none" }}>
-          <SideMenu icon={<Euro />} title="finance" />
+          <SideMenu  title="finance" />
         </Link>
 
         <Link href="/group/pages/travel" style={{ textDecoration: "none" }}>
-          <SideMenu icon={<TravelExplore />} title="Travel" />
+          <SideMenu  title="Travel" />
         </Link>
 
         <Link href="/group/pages/cinema" style={{ textDecoration: "none" }}>
-          <SideMenu icon={<Movie />} title="Cinema" />
+          <SideMenu  title="Cinema" />
         </Link>
 
         <Link href="/group/pages/sport" style={{ textDecoration: "none" }}>
-          <SideMenu icon={<DownhillSkiing />} title="Sport" />
+          <SideMenu  title="Sport" />
         </Link>
 
         <Link href="/group/pages/art" style={{ textDecoration: "none" }}>
-          <SideMenu icon={<Diversity1 />} title="Street Art" />
+          <SideMenu  title="Street Art" />
         </Link>
 
         <Link href="/group/pages/car" style={{ textDecoration: "none" }}>
-          <SideMenu icon={<DriveEta />} title="Car trick" />
+          <SideMenu  title="Car trick" />
         </Link>
       </Box>
     </>
