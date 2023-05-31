@@ -12,13 +12,20 @@ export default function GroupMenu() {
     <>
       <Box
         sx={{
-          width: "20%",
+          width: "18%",
           maxHheight: "100vh",
           p: "14px",
           backgroundColor: "#27374D",
           color: "white",
           borderRadius: {xs: 0, md:2},
           display: { md: "block", xs: "none" },
+          overflowY: "scroll",
+         
+          msOverflowStyle: "none",
+          height: '100%',
+          '&::-webkit-scrollbar':{
+            width:0,
+        }
         }}
       >
         <Typography m={2} variant="h4" textTransform="uppercase">

@@ -17,20 +17,20 @@ const FrienSuggetion = ({image , name}: Props) => {
      "&:hover":{ transform: "scale(1.02)", background: "#ECC9EE"}}}>
          <CardMedia
         component="img"
-        sx={{ width: 145, }}
+        sx={{ width: 128, height:85 }}
         image={image}
         alt="Live from space album cover"
       />
       <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-        <CardContent sx={{ flex: '1 0 auto' }}>
+        <CardContent>
           <Typography component="div" variant="body1">
           {name}
           </Typography>
        
         </CardContent>
         <Box sx={{ display: 'flex', justifyContent: "flex-end", gap:1, }}>
-           <Button sx={{fontSize: "14px", textTransform: "none"}}> Decline</Button>
-           <Button sx={{fontSize: "14px",  textTransform: "none" }} variant='contained'> Accept</Button>
+           <Button size='small' sx={{ textTransform: "none"}}> Decline</Button>
+           <Button size='small' sx={{  textTransform: "none" }} variant='contained'> Accept</Button>
      
          
         </Box>

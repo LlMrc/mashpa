@@ -21,6 +21,9 @@ const cardStyle = {
   background: "gray",
   margin: "10px",
   overflow: "hidden",
+  '&:hover':{
+    opacity: ".2",
+  }
 };
 
 const StyleBox = styled("div")({
@@ -34,7 +37,7 @@ const StyleBox = styled("div")({
 const boxStyle = {
   background: "white",
   opacity: "0.8",
-  height: "140px",
+  height: "120px",
   width: "100%",
   display: "flex",
   flexDirection: "column",
