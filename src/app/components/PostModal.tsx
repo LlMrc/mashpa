@@ -10,7 +10,7 @@ type Props = {
 
 const style = {
   display: "block",
-  borderRadius: 8,
+  borderRadius: 4,
   margin: "1rem auto",
   border: "1px solide grey",
   maxWidth: "50rem",
@@ -22,7 +22,7 @@ const PostModal = async ({ promise }: Props) => {
   const postData = await promise;
 
   return (
-    <Box>
+    <Box padding={2}>
       {postData.map((item) => {
         return (
           <Box key={item.id} sx={style}>

@@ -13,7 +13,8 @@ import Link from "next/link";
 
 
 const paperStyle = {
-
+   height: 42,
+   paddingTop:1,
   boxShadow:
     "0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08)",
   '&:hover':{  boxShadow:
@@ -63,7 +64,7 @@ export default function MuiDrawer({
         <Box bgcolor={'#F8E8EE'} height='75px'  textAlign={'center'}>
        
         <Link href={"/"} style={{ textDecoration: "none" }}>
-          <Typography variant="h5" color={"black"} align="center" marginTop={2} >
+          <Typography variant="h5" color={"black"}  align="center" marginTop={2} >
             Home
           </Typography>
         </Link>
@@ -72,11 +73,11 @@ export default function MuiDrawer({
         <Divider />
         
         {linkItems.map((item) => (
-          <Link  key={item.name} href={item.href}  style={{textDecoration: 'none', margin:2, color: 'black'}}>
-          <Paper  sx={paperStyle}>
-            <Box flexDirection={"row"} alignContent={'center'} gap={2} m={2}  >
-              {item.icon}
-               {item.name}
+          <Link  key={item.name} href={item.href}  style={{textDecoration: 'none', color: 'black'}}>
+          <Paper   sx={paperStyle}>
+            <Box sx={{display:'flex', flexDirection: 'row', alignItems:'center', justifyContent: 'center'}}>
+              {item.icon}<Typography ml={4}>{item.name }</Typography>
+               
             </Box>
           </Paper>
           </Link>

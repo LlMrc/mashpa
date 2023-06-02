@@ -9,7 +9,8 @@ export default function GroupPage() {
  
     <GroupLayout>
       
-      <GroupList img="https://images.pexels.com/photos/1000445/pexels-photo-1000445.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" headerTitle="All" subTitle={'The secret of getting ahead is getting started'}/>
+      <GroupList img="https://images.pexels.com/photos/1000445/pexels-photo-1000445.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+       headerTitle="All" subTitle={'The secret of getting ahead is getting started'}/>
     </GroupLayout>
     </>
 

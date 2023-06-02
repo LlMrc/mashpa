@@ -1,4 +1,6 @@
 type User =  {
+    img:  | null | undefined
+    title: string 
     id: number,
     name: string,
     username: string,

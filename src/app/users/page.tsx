@@ -1,158 +1,97 @@
 "use client";
-
-import React from "react";
-
 import Link from "next/link";
+
+import getAllUsers from "../../../lib/getAllUsers";
+
+
 import {
+  Avatar,
+  Box,
+  Button,
+  Container,
   Grid,
   Stack,
   Typography,
-  Card,
-  Box,
-  CardContent,
-  Button,
-  CardActions,
-  Paper,
-  Avatar,
+  styled,
 } from "@mui/material";
-import NavBar from "../components/NavBar";
-import FrienSuggetion from "../components/FrienSuggetion";
-import getAllUsers from "../../../lib/getAllUsers";
-import { Language } from "@mui/icons-material";
+import FriendSugetionBar from "../components/FriendSugetionBar";
 
-const UsersPAge = async () => {
+
+const PostStyle = styled('div')({
+  display: 'flex',
+  overflow: 'clip',
+  justifyContent: 'space-between',
+  alignContent: 'center',
+  alignItems: 'center',
+   margin: 8
+
+  
+})
+
+export default async function UsersPAge() {
   const userData: Promise<User[]> = getAllUsers();
 
-  const user = await userData;
-  const content = (
-    <>
-      <NavBar />
-      <Stack direction="row">
-        <Box flex={1}>
-          <Grid
-            container
-            gap={4}
-            width="80%"
-            alignItems="center"
-            justifyContent="center"
-            pt={10}
-          >
-            {user.map((item) => (
-              <Grid key={item.id} item xs={12} md={4}>
-                <Card sx={{ maxWidth: 345, background: "#F0F0F0" }}>
-                  <Paper
-                    elevation={0}
-                    sx={{
-                      height: 140,
-                      maxWidth: 345,
-                      background:
-                        "linear-gradient(to right bottom, #917FB3,  #FFB4B4)",
-                      display: "flex",
-                      alignItems: "center",
-                      p: 1,
-                      gap: 1,
-                    }}
-                  >
-                    <Avatar sx={{ p: 2 }}>{item.name[0]}</Avatar>
-
-                    <Box>
-                      <Typography gutterBottom variant="h6">
-                        {item.name}
-                      </Typography>
-                      <Typography
-                        gutterBottom
-                        variant="subtitle1"
-                        noWrap={true}
-                      >
+  const itemData = await userData;
+  return (
+    <Stack direction={'row'}>
+      <Box flex={1}>
+    <Grid container p={6} spacing={4}>
+      {itemData.map((item) => (
+        <Grid xs={12} sm={6} md={6} lg={4} item  key={item.id}>
+          <Box sx={{ background: "#2E3840", borderRadius: 2, padding: 2 }}>
+            <Box
+              sx={{
+                borderRadius: 2,
+                alignItems: "center",
+                display: "flex",
+                padding: 2,
+                minHeight: 150,
+                background: "#5C636E",
+              }}
+            >
+              <PostStyle >
+                <Avatar  />
+                <Box padding={'0 10px'} m={2}>
+                  <Typography noWrap={true} textOverflow={'ellipsis'} variant="h5" color={"white"}>
+                    {item.name}
+                  </Typography>
+                  <Typography variant="body1" color={"white"}>
                     {item.email}
-                      </Typography>
-                    </Box>
-                  </Paper>
+                  </Typography>
+                </Box>
+              </PostStyle>
+            </Box>
 
-                  <CardContent>
-                    <Typography variant="subtitle1" color="text.secondary">
-                     Ph: {item.phone}
-                    </Typography>
-                    <Typography variant="body1" color="text.secondary">
-                     <Language/> {item.website}
-                    </Typography>
-                  </CardContent>
-                  <CardActions sx={{ display: "flex", justifyContent: "end" }}>
-                    <Button size="small" color="error">
-                      Follow
-                    </Button>
-                    <Button variant="contained">
-                  
-                      <Link
-                        href={`/users/${item.id}`}
-                        style={{ textDecoration: "none", color: "white" }}
-                      >
-                        Open
-                      </Link>
-                    </Button>
-                  </CardActions>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
-        </Box>
-
-        <Box
-          sx={{
-            width: '20%',
-            height: "100vh",
-            pt: 10,
-            background: "#F0F0F0",
-            position: "fixed",
-            right: "1px",
-            overflowY: "scroll",
-
-            msOverflowStyle: "none",
-
-            "&::-webkit-scrollbar": {
-              width: 0,
-            },
-          }}
-        >
-          <Box sx={{ position: "relative" }}>
-            <Typography variant="h6" m="0 10px">
-            
-              Friends sugestion
-            </Typography>
-            <FrienSuggetion
-              image="https://th.bing.com/th/id/R.eca7ffe2de50cb7f2c4f407523612d18?rik=GklWQDiYHoJF0A&pid=ImgRaw&r=0"
-              name="joe Biden"
-            />
-            <FrienSuggetion
-              image="https://th.bing.com/th/id/R.c20e72e5c89ce4e093bf5d5622717237?rik=9hFMsKawMs1%2bQg&riu=http%3a%2f%2fmedia.idownloadblog.com%2fwp-content%2fuploads%2f2018%2f07%2fstevejobs.jpg&ehk=7pVWHdJx%2fCDYlzmIq%2b%2b1GWLWrfhP3E%2b54jFB%2bHEKp5U%3d&risl=&pid=ImgRaw&r=0"
-              name="Steeve jobs"
-            />
-            <FrienSuggetion
-              image="https://th.bing.com/th/id/OIP.iB3FB36TW-vfcN7ya7v9BQHaFj?pid=ImgDet&rs=1"
-              name="Gandalph"
-            />
-            <FrienSuggetion
-              image="https://th.bing.com/th/id/R.6f35220e77db0956a6394fbcb18ac265?rik=NMmpHIfQVQkVwA&pid=ImgRaw&r=0"
-              name="Donald Trump"
-            />
-            <FrienSuggetion
-              image="https://th.bing.com/th/id/R.1cd169417811db6d994fa4a9021bff7a?rik=TROjJ1EfuNr6Qw&riu=http%3a%2f%2f2.bp.blogspot.com%2f-C6KY8tsc8Fw%2fT-SVFnncxjI%2fAAAAAAAAANw%2fFMiNzA8Zecw%2fs1600%2fmr.bean.jpg&ehk=70OQ5gbxSP6DTtEiqVGI4xm6cRTny6guvyupOptnrak%3d&risl=&pid=ImgRaw&r=0"
-              name="Mr Bean"
-            />
-            <FrienSuggetion
-              image="https://th.bing.com/th/id/OIP.rd5pQSWmiV3f56MoPGJRtgHaEK?pid=ImgDet&rs=1"
-              name="smeagol gollum"
-            />
-            <FrienSuggetion
-              image="https://th.bing.com/th/id/OIP.vvOLmjhwNznwljPnIxDxTQHaGL?pid=ImgDet&rs=1"
-              name="james bernard"
-            />
+            <Box sx={{ marginTop: 4, marginLeft:2, marginRight:2}}>
+              <PostStyle>
+                <Box flex={1} maxWidth={150}>
+                  <Typography noWrap={true} variant="h6" color={"white"}>
+                    {item.company.name}
+                  </Typography>
+                  <Typography noWrap={true} variant="body2" color={"white"}>
+                    {item.email}
+                  </Typography>
+                  <Typography noWrap={true} color={"white"}>{item.phone}</Typography>
+                </Box>
+                <Box margin={'0 14px'}> 
+                  <Link style={{textDecoration:'none'}} href={`/users/${item.id}`}>
+                     <Button  variant="outlined">Posts</Button>
+                     </Link>
+                 
+                </Box>
+               
+              </PostStyle>
+            </Box>
           </Box>
-        </Box>
-      </Stack>
-    </>
+        </Grid>
+      ))}
+    </Grid>
+    </Box>
+    <Box sx={{
+   
+    }}  >
+      <FriendSugetionBar/>
+    </Box>
+    </Stack>
   );
-  return content;
-};
-
-export default UsersPAge;
+}

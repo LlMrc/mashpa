@@ -6,7 +6,8 @@ import React from 'react'
 const Finance = () => {
   return (
     <GroupLayout>
-     <GroupList img="https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" headerTitle="All Finance " subTitle={'international market data'}/>
+     <GroupList img="https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+     headerTitle="Finance " subTitle={'international market data'}/>
     </GroupLayout>
   )
 }
