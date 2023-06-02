@@ -87,9 +87,13 @@ function NavBar() {
     setNotify(false);
   };
 
+  const StyleToolBar = styled("div")(({ theme }) => ({
+    ...theme.mixins.toolbar,
+  }));
+
   return (
     <>
-
+<>
       <AppBar position="fixed" sx={{ top: 0, margin: 0 }} elevation={0}>
 
         <StyledToolBar>
@@ -159,7 +163,9 @@ function NavBar() {
           </Menu>
         </StyledToolBar>
        
-      </AppBar> 
+      </AppBar>
+       <StyleToolBar/>
+       </>
     
       <Paper sx={paperStyle}>
         <Dialog
