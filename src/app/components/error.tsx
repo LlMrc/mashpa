@@ -2,7 +2,7 @@
 import { Box, Button, Container, Link, Stack, Typography } from '@mui/material'
 import React from 'react'
 
-export default function error({error, reset}:{error: Error, reset:()=> void}) {
+export default function Error({error, reset}:{error: Error, reset:()=> void}) {
   return (
     <Container style={{padding:'60px auto'}}>
         <Box>

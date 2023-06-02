@@ -2,10 +2,8 @@
 
 import { Box, Divider, Typography } from "@mui/material";
 
-
-import SideMenu from "./commun/SideMenu";
+import SideMenu from "./SideMenu";
 import Link from "next/link";
-
 
 export default function GroupMenu() {
   return (
@@ -17,18 +15,19 @@ export default function GroupMenu() {
           p: "14px",
           backgroundColor: "#27374D",
           color: "white",
-          borderRadius: {xs: 0, md:2},
+          borderRadius: 2,
           display: { md: "block", xs: "none" },
+          overflow: "hidden",
           overflowY: "scroll",
-         
+          marginBottom: 6,
           msOverflowStyle: "none",
-          height: '100%',
-          '&::-webkit-scrollbar':{
-            width:0,
-        }
+          height: "100%",
+          "&::-webkit-scrollbar": {
+            width: 0,
+          },
         }}
       >
-        <Typography m={2} variant="h4" textTransform="uppercase">
+        <Typography m={2} variant="h6" textTransform="uppercase">
           CATEGORY
         </Typography>
 
@@ -42,27 +41,27 @@ export default function GroupMenu() {
         </Link>
 
         <Link href="/group/pages/finance" style={{ textDecoration: "none" }}>
-          <SideMenu  title="finance" />
+          <SideMenu title="finance" />
         </Link>
 
         <Link href="/group/pages/travel" style={{ textDecoration: "none" }}>
-          <SideMenu  title="Travel" />
+          <SideMenu title="Travel" />
         </Link>
 
         <Link href="/group/pages/cinema" style={{ textDecoration: "none" }}>
-          <SideMenu  title="Cinema" />
+          <SideMenu title="Cinema" />
         </Link>
 
         <Link href="/group/pages/sport" style={{ textDecoration: "none" }}>
-          <SideMenu  title="Sport" />
+          <SideMenu title="Sport" />
         </Link>
 
         <Link href="/group/pages/art" style={{ textDecoration: "none" }}>
-          <SideMenu  title="Street Art" />
+          <SideMenu title="Street Art" />
         </Link>
 
         <Link href="/group/pages/car" style={{ textDecoration: "none" }}>
-          <SideMenu  title="Car trick" />
+          <SideMenu title="Car trick" />
         </Link>
       </Box>
     </>

@@ -15,9 +15,8 @@ import {
 import Post from "./Post";
 
 import AddPost from "./AddPost";
-import { FavoriteBorder, Favorite, Share } from "@mui/icons-material";
-import MeloImage from "/public/melo.png";
-import Image from "next/image";
+
+
 
 const StyleMargin = styled("div")(({ theme }) => ({
   root: {
@@ -38,6 +37,12 @@ const HomePage = () => {
           <Post img="https://images.pexels.com/photos/5036698/pexels-photo-5036698.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
           <Post img="https://images.pexels.com/photos/5254651/pexels-photo-5254651.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
           <Post img="https://images.pexels.com/photos/8101834/pexels-photo-8101834.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+
+          <Post img="https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+          <Post img="https://images.pexels.com/photos/36762/scarlet-honeyeater-bird-red-feathers.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+          <Post img="https://images.pexels.com/photos/38136/pexels-photo-38136.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+          <Post img="https://images.pexels.com/photos/2607544/pexels-photo-2607544.jpeg?auto=compress&cs=tinysrgb&w=400" />
+          <Post img="https://images.pexels.com/photos/1766838/pexels-photo-1766838.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
          
         </Box>
 

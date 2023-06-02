@@ -79,7 +79,7 @@ export default function BasicMenu() {
             </MenuItem>
         <MenuItem onClick={handleClose}>
         <Link
-          href="/group/pages/Car"
+          href="/group/pages/car"
           style={{ textDecoration: "none" }}
         >
             Car

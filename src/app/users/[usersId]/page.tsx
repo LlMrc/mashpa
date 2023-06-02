@@ -31,7 +31,7 @@ const   user =   async({params :{userId}}: PageProps) =>{
     
     return (
      <>
-      <NavBar />
+     
       <Box height={70}/>
       <Typography variant='h4' fontWeight={'bold'} p={2}>{currentPost.name}</Typography> 
 

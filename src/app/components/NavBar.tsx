@@ -88,9 +88,10 @@ function NavBar() {
   };
 
   return (
-    <Box>
-  
+    <>
+
       <AppBar position="fixed" sx={{ top: 0, margin: 0 }} elevation={0}>
+
         <StyledToolBar>
           <Stack direction={"row"} spacing={2}>
             <Link href="/" style={{ textDecoration: "none", color: "white" }}>
@@ -157,7 +158,8 @@ function NavBar() {
             <MenuItem>Logout</MenuItem>
           </Menu>
         </StyledToolBar>
-      </AppBar>
+       
+      </AppBar> 
     
       <Paper sx={paperStyle}>
         <Dialog
@@ -204,7 +206,7 @@ function NavBar() {
           </DialogActions>
         </Dialog>
       </Paper>
-    </Box>
+    </>
   );
 }
 

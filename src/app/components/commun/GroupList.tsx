@@ -2,9 +2,9 @@
 
 
 
-import { Box, IconButton, Paper, Stack, Typography, styled } from "@mui/material";
+import { Box, Button, Container, Paper, Snackbar, Stack, Typography, styled } from "@mui/material";
 import React from "react";
-import BasicMenu from "../MbileMenuGroup";
+import BasicMenu from "./MbileMenuGroup";
 
 type Props = {
   img: string;
@@ -36,7 +36,7 @@ const StyleBox = styled("div")({
 
 const boxStyle = {
   background: "white",
-  opacity: "0.8",
+  opacity: "0.7",
   height: "120px",
   width: "100%",
   display: "flex",
@@ -44,8 +44,32 @@ const boxStyle = {
   alignItems: "center",
   justifyContent: "center",
 };
+const groupTitle = [
+  {title: 'title 1', description:'desc'},
+  {title: 'title 2', description:'desc0'},
+  {title: 'title 3', description:'desc3'},
+  {title: 'title 4', description:'desc4'},
+  {title: 'title 5', description:'desc5'},
+  {title: 'title 6', description:'desc6'},
+  {title: 'title 7', description:'desc7'},
+  {title: 'title 8', description:'desc8'},
+  {title: 'title 9', description:'desc9'}
+]
 
 const GroupList = ({ img, headerTitle, subTitle }: Props) => {
+  const [open, setOpen] = React.useState(false);
+
+  const handleClick = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (event: React.SyntheticEvent | Event, reason?: string) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setOpen(false);
+  };
   return (
     <Box
       sx={{
@@ -61,24 +85,23 @@ const GroupList = ({ img, headerTitle, subTitle }: Props) => {
       }}
     >
     
-      <Box alignItems={"center"} sx={boxStyle}>
-        <Stack direction={"row"} spacing={2} >
-          <Typography variant="h4" fontWeight={900} letterSpacing={2}>
+      <Container  sx={boxStyle}>
+        <Box  flexDirection={'row'} display={'flex'}>
+          <Typography noWrap={true} pr={'10px'} variant="h4"  fontWeight={900} letterSpacing={2}>
             {headerTitle}
           </Typography>
-          <Typography variant="h4" fontWeight={900} style={{ color: "red" }}>
-     
+          <Typography variant="h4"  fontWeight={900} style={{ color: "red" }}>
             Group
           </Typography>
-  
+  {/* category button display in mobile mode */}
          <BasicMenu/>
       
-        </Stack>
+        </Box>
 
         <Typography variant="body2" letterSpacing={2}>
           {subTitle}
         </Typography>
-      </Box>
+      </Container>
 
       <Box
         sx={{
@@ -92,37 +115,27 @@ const GroupList = ({ img, headerTitle, subTitle }: Props) => {
         }}
       >
         <StyleBox>
-          <Paper variant="outlined" sx={cardStyle}>
-            <Typography variant="h5"> Group title 1</Typography>
-          </Paper>
-          <Paper variant="outlined" sx={cardStyle}>
-            <Typography variant="h5"> Group title 2</Typography>
-          </Paper>
-          <Paper variant="outlined" sx={cardStyle}>
-            <Typography variant="h5"> Group title 3</Typography>
-          </Paper>
-          <Paper variant="outlined" sx={cardStyle}>
-            <Typography variant="h5"> Group title 4</Typography>
-          </Paper>
-          <Paper variant="outlined" sx={cardStyle}>
-            <Typography variant="h5"> Group title 5</Typography>
-          </Paper>
-          <Paper variant="outlined" sx={cardStyle}>
-            <Typography variant="h5"> Group title 6</Typography>
-          </Paper>
-          <Paper variant="outlined" sx={cardStyle}>
-            <Typography variant="h5"> Group title 4</Typography>
-          </Paper>
-          <Paper variant="outlined" sx={cardStyle}>
-            <Typography variant="h5"> Group title 5</Typography>
-          </Paper>
-          <Paper variant="outlined" sx={cardStyle}>
-            <Typography variant="h5"> Group title 6</Typography>
-          </Paper>
+       
+         {groupTitle.map(item=>{
+          return (
+            <Paper key={item.description} variant="outlined"  sx={cardStyle}>
+              <Button sx={{color:'white'}} variant="text" onClick={handleClick}>{item.title}</Button>  
+            </Paper>
+          )
+         })}
+        
         </StyleBox>
       </Box>
+      <Snackbar
+  open={open}
+  autoHideDuration={6000}
+  onClose={handleClose}
+  message="This page was not added by the developer"
+  
+/>
     </Box>
   );
 };
+
 
 export default GroupList;
