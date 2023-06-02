@@ -33,8 +33,8 @@ export default async function UsersPAge() {
 
   const itemData = await userData;
   return (
-    <Stack direction={'row'}>
-      <Box flex={1}>
+    <Stack  direction={'row'}>
+      <Box flex={1} maxWidth={'100vw'}>
     <Grid container p={6} spacing={4}>
       {itemData.map((item) => (
         <Grid xs={12} sm={6} md={6} lg={4} item  key={item.id}>
@@ -87,9 +87,7 @@ export default async function UsersPAge() {
       ))}
     </Grid>
     </Box>
-    <Box sx={{
-   
-    }}  >
+    <Box>
       <FriendSugetionBar/>
     </Box>
     </Stack>

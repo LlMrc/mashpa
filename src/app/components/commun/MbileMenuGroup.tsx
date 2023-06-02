@@ -3,7 +3,7 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import { IconButton } from '@mui/material';
-import { Category } from '@mui/icons-material';
+import { Category, ListAlt } from '@mui/icons-material';
 import Link from 'next/link';
 
 export default function BasicMenu() {
@@ -26,7 +26,7 @@ export default function BasicMenu() {
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >
-        <Category/>
+        <ListAlt/>
       </IconButton>
       <Menu
         id="basic-menu"

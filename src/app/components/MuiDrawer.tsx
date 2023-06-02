@@ -52,32 +52,30 @@ export default function MuiDrawer({
   setOpen: () => void;
 }) {
   return (
-    <Drawer
-    
+    <Drawer   
       anchor="left"
       aria-label="mui drawer"
       open={isOpen}
       onClose={setOpen}
     >
       <Stack width={200} spacing={2} p={2}>
-      
-        <Box bgcolor={'#F8E8EE'} height='75px'  textAlign={'center'}>
+      <Link onClick={setOpen} href={"/"} style={{ textDecoration: "none" }}>
+        <Box bgcolor={'#F8E8EE'} borderRadius={2} height='75px'  textAlign={'center'}>
        
-        <Link href={"/"} style={{ textDecoration: "none" }}>
-          <Typography variant="h5" color={"black"}  align="center" marginTop={2} >
+     
+          <Typography variant="h5" color={"black"}  align="center" pt={2} >
             Home
           </Typography>
-        </Link>
-        </Box>
         
+        </Box>
+        </Link>
         <Divider />
         
         {linkItems.map((item) => (
-          <Link  key={item.name} href={item.href}  style={{textDecoration: 'none', color: 'black'}}>
+          <Link onClick={setOpen} key={item.name} href={item.href}  style={{textDecoration: 'none', color: 'black'}}>
           <Paper   sx={paperStyle}>
             <Box sx={{display:'flex', flexDirection: 'row', alignItems:'center', justifyContent: 'center'}}>
-              {item.icon}<Typography ml={4}>{item.name }</Typography>
-               
+              {item.icon}<Typography ml={4}>{item.name}</Typography>            
             </Box>
           </Paper>
           </Link>
