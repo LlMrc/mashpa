@@ -4,7 +4,7 @@
 import React from 'react'
 import {Avatar, Box, Card, CardActions, CardContent, CardHeader, CardMedia, Checkbox, IconButton, IconButtonProps, Typography} from '@mui/material'
 
-import {  Favorite, FavoriteBorder, MoreVert, Scale, Share } from '@mui/icons-material'
+import {  Favorite, FavoriteBorder, Instagram, MoreVert, Pinterest, Scale, Share, Telegram, Twitter } from '@mui/icons-material'
 import { red } from '@mui/material/colors';
 
 
@@ -61,7 +61,11 @@ const Post: React.FC<Props>= ({img}) => {
     <IconButton aria-label="share">
       <Share />
     </IconButton>
-
+<Box sx={{display:'flex', flex:1}}/>
+<Pinterest sx={{color:'gray'}}/>
+<Instagram sx={{color:'gray'}}/>
+<Twitter sx={{color:'gray'}}/>
+<Telegram sx={{color:'gray'}}/>
   </CardActions>
 
   </Card>
