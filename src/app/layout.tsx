@@ -1,5 +1,5 @@
 
-"use client"
+
 import { Inter } from 'next/font/google'
 import NavBar from './components/NavBar'
 import { styled } from '@mui/material';
@@ -15,9 +15,7 @@ export const metadata = {
 
 
 
-const StyleToolBar = styled("div")(({ theme }) => ({
-  ...theme.mixins.toolbar,
-}));
+
 export default function RootLayout({ children,}: {children: React.ReactNode}) {
   return (
    
@@ -25,7 +23,7 @@ export default function RootLayout({ children,}: {children: React.ReactNode}) {
  <body className={inter.className} style={{margin:0}}>
    
       <NavBar />
-    <StyleToolBar/>
+   
     { children}
 
     
