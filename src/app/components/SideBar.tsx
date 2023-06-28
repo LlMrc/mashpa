@@ -1,6 +1,6 @@
 
 import styled from "@emotion/styled";
-import { Dashboard, PersonAdd, Group, StorefrontOutlined, AccountCircleOutlined } from "@mui/icons-material";
+import { Dashboard, PersonAdd, Group, StorefrontOutlined, AccountCircleOutlined, Newspaper, Settings, Pages, Feed, FindInPage, RssFeed } from "@mui/icons-material";
 
 import { Box, Typography, Divider } from "@mui/material";
 
@@ -55,30 +55,30 @@ const TitleStyled = styled("span")({
 
 const linkItems = [
   {
-    name: "Homepage",
+    name: "Feed",
     href: "/",
-    icon: <Dashboard />,
+    icon: <Feed />,
   },
   {
-    name: "Users",
+    name: "Friends",
     href: "/users",
     icon: <PersonAdd />,
   },
   {
-    name: "Groups",
+    name: "Pages",
     href: "/group",
-    icon: <Group />,
+    icon: <FindInPage />,
   },
   {
-    name: "My gallery",
-    href: "/gallery",
-    icon: <StorefrontOutlined />,
+    name: "Breacking News",
+    href: "/news",
+    icon: <RssFeed />,
   },
 
   {
-    name: "Sign up",
-    href: "/",
-    icon: <AccountCircleOutlined />,
+    name: "Settings",
+    href: "/settings",
+    icon: <Settings />,
   },
 ];
 const sideStyle = {
@@ -106,7 +106,7 @@ const sideBar: FC<SideItem> = () => {
         <Ulstyled>
           {linkItems.map((item) => (
             <Li_style key={item.name}>
-              <Link
+              <Link passHref
                 href={item.href}
                 style={{ textDecoration: "none", color: "black" }}
               >

@@ -3,20 +3,12 @@
 import React from "react";
 import {
   Box,
-  Card,
-  CardActions,
-  CardContent,
-  Checkbox,
-  Container,
-  IconButton,
-  Typography,
+
   styled,
 } from "@mui/material";
 import Post from "./Post";
 
 import AddPost from "./AddPost";
-
-
 
 const StyleMargin = styled("div")(({ theme }) => ({
   root: {
@@ -29,7 +21,6 @@ const StyleMargin = styled("div")(({ theme }) => ({
 const HomePage = () => {
   return (
     <>
-     
       <StyleMargin>
         <Box flex={1} sx={{ padding: { xs: 0, sm: 0, md: 2 } }}>
           <Post img="https://images.pexels.com/photos/2674052/pexels-photo-2674052.jpeg?auto=compress&cs=tinysrgb&w=400" />
@@ -46,7 +37,6 @@ const HomePage = () => {
           <Post img="https://images.pexels.com/photos/1228497/pexels-photo-1228497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
           <Post img="https://images.pexels.com/photos/2194261/pexels-photo-2194261.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
           <Post img="https://images.pexels.com/photos/945471/pexels-photo-945471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-         
         </Box>
 
         <AddPost />

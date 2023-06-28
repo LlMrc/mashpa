@@ -32,14 +32,14 @@ const   user =   async({params :{userId}}: PageProps) =>{
     return (
      <>
      
-      <Box height={70}/>
+      <Box height={70} />
       <Typography variant='h4' fontWeight={'bold'} p={2}>{currentPost.name}</Typography> 
 
       {/* @ts-expect-error Async Server Component */}
       <Suspense fallback={<h2>loading...</h2>}> <PostModal promise={postData}/></Suspense>
   
        
-           
+ 
        
      </>
     )

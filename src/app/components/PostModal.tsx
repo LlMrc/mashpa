@@ -1,7 +1,6 @@
-'use client'
+"use client";
 
-
-import { Box, Divider, Paper, Typography } from "@mui/material";
+import { Avatar, Box, Divider, Paper, Typography } from "@mui/material";
 import React from "react";
 
 type Props = {
@@ -11,11 +10,10 @@ type Props = {
 const style = {
   display: "block",
   borderRadius: 4,
-  margin: "1rem auto",
+  margin: "0 auto",
   border: "1px solide grey",
   maxWidth: "50rem",
-  background: 'rgba(0, 0, 0, 0.18)',
-
+  background: "rgba(0, 0, 0, 0.18)",
 };
 
 const PostModal = async ({ promise }: Props) => {
@@ -25,16 +23,20 @@ const PostModal = async ({ promise }: Props) => {
     <Box padding={2}>
       {postData.map((item) => {
         return (
-          <Box key={item.id} sx={style}>
-           
-            <Typography p={4} variant="h5" fontWeight={'600'}> {item.title}</Typography>
+          <Box key={item.id}  sx={style}>
+            <Typography p={4} variant="h5" fontWeight={"600"}>
+          
+              {item.title}
+            </Typography>
             <Divider />
-            <Box p={2}> 
-                <Typography variant="h6">{item.body}</Typography>
-            </Box>
+
+            <Typography p={2} variant="h6">
+              {item.body}
+            </Typography>
           </Box>
         );
       })}
+      <Box height={10}/>
     </Box>
   );
 };

@@ -2,7 +2,7 @@
 'use client'
 
 import React from 'react'
-import {Avatar, Box, Card, CardActions, CardContent, CardHeader, CardMedia, Checkbox, IconButton, IconButtonProps, Typography} from '@mui/material'
+import {Avatar, Box, Card, CardActions, CardContent, CardHeader, CardMedia, Checkbox, IconButton, Typography} from '@mui/material'
 
 import {  Favorite, FavoriteBorder, Instagram, MoreVert, Pinterest, Scale, Share, Telegram, Twitter } from '@mui/icons-material'
 import { red } from '@mui/material/colors';
