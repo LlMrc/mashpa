@@ -1,7 +1,7 @@
 "use client";
 
 import GroupLayout from "@/app/components/commun/layout";
-import illustration from "../../../../../public/img/finance.png";
+import illustration from "../../../../../public/illustration.png";
 
 import {
   Typography,

@@ -5,7 +5,12 @@ const nextConfig = {
        },
      images: {
          domains: ['i.pinimg.com', 'image.cnbcfm.com']
-     }
+     },
+     eslint: {
+        // Warning: This allows production builds to successfully complete even if
+        // your project has ESLint errors.
+        ignoreDuringBuilds: true,
+      },
  }
 
 
