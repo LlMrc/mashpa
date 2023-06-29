@@ -23,7 +23,7 @@ const MarketPlace = () => {
         method: "GET",
         headers: {
           "X-RapidAPI-Host": "cnbc.p.rapidapi.com",
-          "X-RapidAPI-Key": "f6780b750dmsh73629311abdc462p1346aejsnbc316f87258c",
+          "X-RapidAPI-Key": `${process.env.apiKey}`,
         },
       };
 

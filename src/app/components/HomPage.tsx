@@ -19,6 +19,7 @@ const StyleMargin = styled("div")(({ theme }) => ({
   },
 }));
 const HomePage = () => {
+
   return (
     <>
       <StyleMargin>

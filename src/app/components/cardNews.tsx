@@ -96,6 +96,7 @@ export default function CardNews({
                   margin={"0 auto"}
                   maxWidth={100}
                   borderRadius={30}
+                  p={2}
                   bgcolor={"black"}
                 >
                   <Link

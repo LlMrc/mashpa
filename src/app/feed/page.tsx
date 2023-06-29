@@ -10,6 +10,7 @@ import HomePage from "../components/HomPage";
 interface FeedProps {}
 
 const feed: FC<FeedProps> = () => {
+ 
   return (
     <>
       <BaseLayout>
