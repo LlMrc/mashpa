@@ -33,11 +33,15 @@ import React from "react";
 import MuiDrawer from "./MuiDrawer";
 import Link from "next/link";
 
-const StyledToolBar = styled(Toolbar)({
-  display: "flex",
-
-  justifyContent: "space-between",
-});
+const StyledToolbar = styled(Toolbar)(({ theme }) => ({
+  alignItems: 'flex-start',
+  paddingTop: theme.spacing(1),
+  paddingBottom: theme.spacing(2),
+  // Override media queries injected by theme.mixins.toolbar
+  '@media all': {
+    minHeight: 128,
+  },
+}));
 const paperStyle = {
   fontSize: "1.5rem",
   fontWeight: 900,
@@ -87,31 +91,30 @@ function NavBar() {
     setNotify(false);
   };
 
-  const StyleToolBar = styled("div")(({ theme }) => ({
+  const CssToolbar = styled("div")(({ theme }) => ({
     ...theme.mixins.toolbar,
   }));
 
   return (
     <>
 <>
-      <AppBar position="fixed" sx={{ top: 0, margin: 0 }} elevation={0}>
+      <AppBar position="sticky" sx={{ top: 0, margin: 0 }} elevation={0}>
 
-        <StyledToolBar>
-          <Stack direction={"row"} spacing={2}>
-            <Link href="/" style={{ textDecoration: "none", color: "white" }}>
-              <Home sx={{ display: { xs: "none", sm: "block" } }} />
+        <Toolbar sx={{display:'flex', justifyContent: 'space-between'}}>
+          <Stack >
+            <Link passHref href="/" style={{ textDecoration: "none", color: "white" }}>
+              <Home sx={{ display: { xs: "block", sm: "none" } }} />
             </Link>
             <Typography
               variant="h6"
               sx={{ display: { xs: "none", sm: "block" } }}
             >
-              <Link href="/" style={{ textDecoration: "none", color: "white" }}>
-                MASHPA
+              <Link href="/" style={{ textDecoration: "none", color: "white" }} >
+               HOME
               </Link>
             </Typography>
           </Stack>
           <IconButton onClick={handleOpenDrawer}>
-        
             <MenuIcon  sx={{color:"white", display: { xs: "block", sm: "none" }}} />
           </IconButton>
 
@@ -161,10 +164,10 @@ function NavBar() {
             <MenuItem>My account</MenuItem>
             <MenuItem>Logout</MenuItem>
           </Menu>
-        </StyledToolBar>
+        </Toolbar>
        
       </AppBar>
-       <StyleToolBar/>
+    
        </>
     
       <Paper sx={paperStyle}>
