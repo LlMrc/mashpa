@@ -28,7 +28,7 @@ const Entertainment =  () => {
   const theme = useTheme();
   return (
     <GroupLayout>
-      <Container sx={{maxWidth:'600px', overflowX:'hidden' }}>
+      <Container sx={{maxWidth:'400px', overflowX:'hidden' }}>
         <Stack
           justifyContent={"center"}
           alignItems={"center"}
@@ -52,11 +52,21 @@ const Entertainment =  () => {
      <Image src={'https://i.pinimg.com/564x/5b/80/b7/5b80b79d7ecc80b6c2322fa176519621.jpg'} alt={""} height={400}  width={350}/>
        
         </Stack>
-       <Box display={'flex'} marginTop={10} marginBottom={4} flexWrap={'wrap'} gap={3} >
+       <Box    sx={{
+            justifyContent: "center",
+            alignItems: "center",
+            display: "flex",
+            marginTop: 10,
+            marginBottom: 4,
+            spacing: 2,
+            gap: 4,
+            flexWrap: "wrap",
+            padding: "16px 0",
+          }} >
        <Card
           sx={{
             display: "flex",
-            width: { md: "500px" },  boxShadow: `6px 14px 40px -5px rgba(0,0,0,0.34);
+            width: { md: "400px" },  boxShadow: `6px 14px 40px -5px rgba(0,0,0,0.34);
             -webkit-box-shadow: 6px 14px 40px -5px rgba(0,0,0,0.34);
             -moz-box-shadow: 6px 14px 40px -5px rgba(0,0,0,0.34)`
           }}
@@ -93,7 +103,7 @@ const Entertainment =  () => {
         <Card
           sx={{
             display: "flex",
-            width: { md: "600px" },  boxShadow: `6px 14px 40px -5px rgba(0,0,0,0.34);
+            width: { md: "400px" },  boxShadow: `6px 14px 40px -5px rgba(0,0,0,0.34);
             -webkit-box-shadow: 6px 14px 40px -5px rgba(0,0,0,0.34);
             -moz-box-shadow: 6px 14px 40px -5px rgba(0,0,0,0.34)`
           }}
@@ -166,7 +176,7 @@ const Entertainment =  () => {
         <Card
           sx={{
             display: "flex",
-            width: { md: "550px" },  boxShadow: `6px 14px 40px -5px rgba(0,0,0,0.34);
+            width: { md: "400px" },  boxShadow: `6px 14px 40px -5px rgba(0,0,0,0.34);
             -webkit-box-shadow: 6px 14px 40px -5px rgba(0,0,0,0.34);
             -moz-box-shadow: 6px 14px 40px -5px rgba(0,0,0,0.34)`
           }}

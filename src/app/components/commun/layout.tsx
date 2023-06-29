@@ -47,6 +47,7 @@ const boxstyle = {
   flexPositon: "row",
   height: "100vh",
   width: "100%",
+ 
 };
 
 const GroupLayout = ({ children }: { children: React.ReactNode }) => {

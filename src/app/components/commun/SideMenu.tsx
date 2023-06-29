@@ -24,7 +24,7 @@ const SideMenu = ({ title }: Props) => {
 
 export default function GroupMenu() {
   return (
-    <Box width={"210px"} sx={{ display: { xs: "none", sm: "block" } }}>
+    <Box width={"240px"} sx={{ display: { xs: "none", sm: "block" } }}>
       <Box
         sx={{
           marginTop: 10,
