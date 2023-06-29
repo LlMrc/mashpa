@@ -38,7 +38,7 @@ const pagess = [
   },
   {
     name: "Sport",
-    href: "/news",
+    href: "/group/pages/sport",
   },
 ];
 

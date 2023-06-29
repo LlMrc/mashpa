@@ -1,14 +1,11 @@
 import {
-  PersonAdd,
-  Group,
-  StorefrontOutlined,
-  AccountCircleOutlined,
+
   Newspaper,
   PagesSharp,
   Person2,
   Feed,
 } from "@mui/icons-material";
-import { Box, Divider, Drawer, Paper, Stack, Typography } from "@mui/material";
+import { Box, Divider, Drawer, Stack, Typography } from "@mui/material";
 import Link from "next/link";
 
 const paperStyle = {

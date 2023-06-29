@@ -101,6 +101,9 @@ function NavBar() {
       <AppBar position="sticky" sx={{ top: 0, margin: 0 }} elevation={0}>
 
         <Toolbar sx={{display:'flex', justifyContent: 'space-between'}}>
+        <IconButton onClick={handleOpenDrawer}>
+            <MenuIcon  sx={{color:"white", display: { xs: "block", sm: "none" }}} />
+          </IconButton>
           <Stack >
             <Link passHref href="/" style={{ textDecoration: "none", color: "white" }}>
               <Home sx={{ display: { xs: "block", sm: "none" } }} />
@@ -114,9 +117,7 @@ function NavBar() {
               </Link>
             </Typography>
           </Stack>
-          <IconButton onClick={handleOpenDrawer}>
-            <MenuIcon  sx={{color:"white", display: { xs: "block", sm: "none" }}} />
-          </IconButton>
+        
 
           <MuiDrawer isOpen={drawer} setOpen={handleCloseDrawer} />
           <Shearch>
